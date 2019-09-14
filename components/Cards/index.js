@@ -40,7 +40,7 @@ axios.get('https://lambda-times-backend.herokuapp.com/articles')
         });
      })
 
-function makeArticle(articleStuff){
+function makeArticle(data){
     //elements
      let cardCont= document.createElement('div')
      let cardHead= document.createElement('div')
@@ -63,9 +63,9 @@ function makeArticle(articleStuff){
      cardImgCont.classList.add('img-container')
     
     //add text stuff
-    cardHead.textContent= articleStuff.data.articles.headline
-    img.src= articleStuff.data.articles.authorPhoto
-    cardAuth.textContent= 'By' + articleStuff.data.articles.authorName
+    cardHead.textContent= data.headline
+    img.src= data.authorPhoto
+    cardAuth.textContent= 'By' + data.authorName
 
     return cardCont;
 }
