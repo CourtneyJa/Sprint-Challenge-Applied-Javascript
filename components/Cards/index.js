@@ -65,7 +65,7 @@ function makeArticle(data){
     //add text stuff
     cardHead.textContent= data.headline
     img.src= data.authorPhoto
-    cardAuth.textContent= 'By' + data.authorName
+    cardAuth.textContent= 'By ' + data.authorName
 
     return cardCont;
 }
